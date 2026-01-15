@@ -1,0 +1,25 @@
+{
+  "mcpServers": {
+    "snowflake": {
+      "command": "/Users/anuragkrishna/Documents/ai_projects/PM-Assistant/snowflake-mcp/.venv/bin/python3",
+      "args": ["-u","snowflake-mcp/server.py"],
+      "env": {
+        "SNOWFLAKE_ACCOUNT": "uipath_observability.west-europe.azure",
+        "SNOWFLAKE_USERNAME": "anurag.krishna@uipath.com",
+        "SNOWFLAKE_WAREHOUSE": "PROD_CUSTOMER_READ",
+       // "SNOWFLAKE_ROLE": "${SNOWFLAKE_ROLE}",
+        //"SNOWFLAKE_DATABASE": "${SNOWFLAKE_DATABASE}",
+        //"SNOWFLAKE_SCHEMA": "${SNOWFLAKE_SCHEMA}",
+
+        // Explicitly declare SSO
+        "SNOWFLAKE_AUTHENTICATOR": "externalbrowser"
+      },
+      "timeout": 30000,
+      "trust": false,
+      "includeTools": [
+        "list_saved_queries",
+        "run_saved_query"
+      ]
+    }
+  }
+}
